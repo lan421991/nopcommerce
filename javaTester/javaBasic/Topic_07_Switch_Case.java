@@ -10,8 +10,6 @@ public class Topic_07_Switch_Case {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
 
-
-	
 	@Parameters("browser")
 	@Test
 	public void TC_03(String browserName) {
