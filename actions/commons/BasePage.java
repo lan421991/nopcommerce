@@ -16,6 +16,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 // chứa các hàm dùng dung cho 1 page của application
+	public static BasePage getBasePageObject() {
+		return new BasePage();
+	}
 	
 	public void openPageUrl(WebDriver driver, String pageUrl) {
 		driver.get(pageUrl);
@@ -93,15 +96,19 @@ public class BasePage {
 			driver.switchTo().window(parentPageID);
 		}
 	
-	public By getByXpath(String xpathLocator) {
+	private By getByXpath(String xpathLocator) {
 		return By.xpath(xpathLocator);
 	}
 	
-	public WebElement getWebElement(WebDriver driver, String xpathLocator) {
+	private WebElement getWebElement(WebDriver driver, String xpathLocator) {
 		return driver.findElement(getByXpath(xpathLocator));
 	}	
 	
-	public List<WebElement> getListElement(WebDriver driver, String xpathLocator) {
+	public String getElementText(WebDriver driver, String xpathLocator) {
+		return getWebElement(driver,xpathLocator).getText() ;
+	}	
+	
+	private List<WebElement> getListElement(WebDriver driver, String xpathLocator) {
 		return driver.findElements(getByXpath(xpathLocator));
 	}
 	
@@ -109,7 +116,7 @@ public class BasePage {
 		getWebElement(driver,xpathLocator).click();
 	}
 	
-	public void senkeyToElement(WebDriver driver, String xpathLocator, String textValue) {
+	public void sendkeyToElement(WebDriver driver, String xpathLocator, String textValue) {
 		WebElement element = getWebElement(driver,xpathLocator);
 		element.clear();
 		element.sendKeys(textValue);
@@ -189,7 +196,7 @@ public class BasePage {
 		}
 	}
 	
-	public boolean isElemnentDisplay(WebDriver driver, String xpathLocator) {
+	public boolean isElementDisplayed(WebDriver driver, String xpathLocator) {
 		return getWebElement(driver, xpathLocator).isDisplayed();
 	}
 	
