@@ -1,5 +1,7 @@
 package commons;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,7 +15,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	private WebDriver driver;
-	protected WebDriver getBrowserDriver(String browserName) {
+	protected WebDriver getBrowserDriver(String browserName,String urlValue) {
 		if(browserName.equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
@@ -53,7 +55,9 @@ public class BaseTest {
 			driver = new EdgeDriver();
 		}else {
 			throw new RuntimeException("Browser name invalid");
-		}
+		}	  
+		  driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		  driver.get(urlValue);
 		return driver;
 	}
 }

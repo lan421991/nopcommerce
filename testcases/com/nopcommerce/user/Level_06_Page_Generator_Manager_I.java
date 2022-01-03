@@ -8,14 +8,17 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BasePage;
+import commons.BaseTest;
 import pageObjects.nopcommerce.HomePageObject;
 import pageObjects.nopcommerce.LoginPageObject;
+import pageObjects.nopcommerce.PageGeneratorManager;
 import pageObjects.nopcommerce.RegisterPageObject;
 
-public class Level_03_Page_Object_Login{
+public class Level_06_Page_Generator_Manager_I extends BaseTest{
 	  
 		private WebDriver driver;
 		private String firstName, lastName, invalidEmail, notFoundEmail, exitingEmail, validPassword,inValidPassword;
@@ -24,15 +27,13 @@ public class Level_03_Page_Object_Login{
 		private RegisterPageObject registerPage;
 		private String projectPath = System.getProperty("user.dir");
 	
-  @BeforeClass
-  public void beforeClass() {
-	  System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
-	  driver = new FirefoxDriver();
+	@Parameters("browser")
+	@BeforeClass
+	public void beforeClass(String browserName) {
+	  driver = getBrowserDriver(browserName);
 	  
-	  homePage = new HomePageObject(driver);
-	  registerPage = new RegisterPageObject(driver);
+	  homePage = PageGeneratorManager.getHomePage(driver);
 
-	  
 	  driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	  driver.get("https://demo.nopcommerce.com/");
 	  

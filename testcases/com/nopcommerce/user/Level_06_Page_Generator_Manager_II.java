@@ -8,33 +8,24 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BasePage;
+import commons.BaseTest;
 import pageObjects.nopcommerce.HomePageObject;
 import pageObjects.nopcommerce.LoginPageObject;
+import pageObjects.nopcommerce.MyAccountPageObject;
+import pageObjects.nopcommerce.PageGeneratorManager;
 import pageObjects.nopcommerce.RegisterPageObject;
 
-public class Level_03_Page_Object_Login{
-	  
-		private WebDriver driver;
-		private String firstName, lastName, invalidEmail, notFoundEmail, exitingEmail, validPassword,inValidPassword;
-		private HomePageObject homePage;
-		private LoginPageObject loginPage;
-		private RegisterPageObject registerPage;
-		private String projectPath = System.getProperty("user.dir");
-	
-  @BeforeClass
-  public void beforeClass() {
-	  System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
-	  driver = new FirefoxDriver();
-	  
-	  homePage = new HomePageObject(driver);
-	  registerPage = new RegisterPageObject(driver);
+public class Level_06_Page_Generator_Manager_II extends BaseTest{
 
-	  
-	  driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-	  driver.get("https://demo.nopcommerce.com/");
+	@Parameters({"browser","url"})
+	@BeforeClass
+	public void beforeClass(String browserName, String url) {
+	  driver = getBrowserDriver(browserName,url);
+	  homePage = PageGeneratorManager.getHomePage(driver);
 	  
 	  firstName = "Automation";
 	  lastName = "FC";
@@ -45,8 +36,8 @@ public class Level_03_Page_Object_Login{
 	  inValidPassword = "654321";
 	  
 	  System.out.println("PreCondition - Step 01 : Click register link"); 
-	  homePage.clickToRegisterLink();
-	  
+	  registerPage = homePage.clickToRegisterLink();
+
 	  System.out.println("PreCondition - Step 02: Input to required fields"); 
 	  registerPage.inputToFirstNameTextbox(firstName);
 	  registerPage.inputToLastNameTextbox(lastName);
@@ -62,21 +53,20 @@ public class Level_03_Page_Object_Login{
 	  Assert.assertEquals(registerPage.getRegisterSuccessMessage(),"Your registration completed");
 
 	  System.out.println("PreCondition - Step 05 : Click to logout link"); 
-	  registerPage.clickToLogoutLink();
+	  homePage = registerPage.clickToLogoutLink();
+
   	}
 
   @Test
   public void Login_01_Empty_Data() {
-	  homePage.clicktoLoginLink();
-	  loginPage = new LoginPageObject(driver);
+	  loginPage = homePage.clicktoLoginLink();
 	  loginPage.clickToLoginButton();
 	  Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Please enter your email"); 
   	}
   
   @Test
   public void Login_02_Invalid_Email() {
-	  homePage.clicktoLoginLink();
-	  loginPage = new LoginPageObject(driver);
+	  loginPage = homePage.clicktoLoginLink();
 	  loginPage.inputEmailTextbox(invalidEmail);
 	  loginPage.clickToLoginButton();
 	  Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Wrong email"); 
@@ -84,8 +74,7 @@ public class Level_03_Page_Object_Login{
   
   @Test
   public void Login_03_Email_Not_Found() {
-	  homePage.clicktoLoginLink();
-	  loginPage = new LoginPageObject(driver);
+	  loginPage = homePage.clicktoLoginLink();
 	  loginPage.inputEmailTextbox(notFoundEmail);
 	  loginPage.clickToLoginButton();
 	  Assert.assertEquals(loginPage.getErrorMessageUnsuccessfull(), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found"); 
@@ -93,8 +82,7 @@ public class Level_03_Page_Object_Login{
   	
   @Test
   public void Login_04_Exiting_Email_Empty_Password() {
-	  homePage.clicktoLoginLink();
-	  loginPage = new LoginPageObject(driver);
+	  loginPage = homePage.clicktoLoginLink();
 	  loginPage.inputEmailTextbox(exitingEmail);
 	  loginPage.inputToPasswordTextbox("");
 	  loginPage.clickToLoginButton();
@@ -103,8 +91,7 @@ public class Level_03_Page_Object_Login{
   
   @Test
   public void Login_05_Exiting_Email_Incorrect_Password() {
-	  homePage.clicktoLoginLink();
-	  loginPage = new LoginPageObject(driver);
+	  loginPage = homePage.clicktoLoginLink();
 	  loginPage.inputEmailTextbox(exitingEmail);
 	  loginPage.inputToPasswordTextbox(inValidPassword);
 	  loginPage.clickToLoginButton();
@@ -113,13 +100,12 @@ public class Level_03_Page_Object_Login{
   
   @Test
   public void Login_06_Valid_Email_Password() {
-	  homePage.clicktoLoginLink();
-	  loginPage = new LoginPageObject(driver);
+	  loginPage = homePage.clicktoLoginLink();
 	  loginPage.inputEmailTextbox(exitingEmail);
 	  loginPage.inputToPasswordTextbox(validPassword);
-	  loginPage.clickToLoginButton();
-	  homePage = new HomePageObject(driver);
-	  Assert.assertTrue(homePage.isMyAccountLimkDisplayed()); 
+	  homePage = loginPage.clickToLoginButton();
+	  Assert.assertTrue(homePage.isMyAccountLimkDisplayed());
+	  myAccountPage = homePage.clickToMyAccount();
   	}
   
   public int genarateFakeNumber() {
@@ -131,6 +117,11 @@ public class Level_03_Page_Object_Login{
   public void afterClass() {
 	  driver.quit();
   }
-
-
+  
+	private WebDriver driver;
+	private String firstName, lastName, invalidEmail, notFoundEmail, exitingEmail, validPassword,inValidPassword;
+	private HomePageObject homePage;
+	private LoginPageObject loginPage;
+	private RegisterPageObject registerPage;
+	private MyAccountPageObject myAccountPage;
 }

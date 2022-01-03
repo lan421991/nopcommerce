@@ -1,20 +1,28 @@
-package pageObject;
+package pageObjects.nopcommerce;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import commons.BasePage;
-import pageUIs.LoginPageUI;
+import pageUIs.nopcommerce.LoginPageUI;
 
 public class LoginPageObject extends BasePage{
 	private WebDriver driver;
+	private WebDriverWait expicitWait;
 
 	public LoginPageObject(WebDriver driver) {
 		this.driver = driver;
 	}
+	
+	public LoginPageObject(WebDriver driver, WebDriverWait expicitWait) {
+		this.driver = driver;
+		this.expicitWait = expicitWait;
+	}
 
-	public void clickToLoginButton() {
+	public HomePageObject clickToLoginButton() {
 		waitForElementClickEnable(driver, LoginPageUI.LOGIN_BUTTON);
-		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);		
+		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
+		return PageGeneratorManager.getHomePage(driver);
 	}
 
 	public String getErrorMessageAtEmailTextbox() {

@@ -14,8 +14,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObject.HomePageObject;
-import pageObject.RegisterPageObject;
+import pageObjects.nopcommerce.HomePageObject;
+import pageObjects.nopcommerce.RegisterPageObject;
 
 public class Level_04_Multiple_Browser extends BaseTest{
 		private WebDriver driver;
@@ -27,9 +27,6 @@ public class Level_04_Multiple_Browser extends BaseTest{
   @BeforeClass
   public void beforeClass(String browserName) {
 	  driver = getBrowserDriver(browserName);
-	  
-	  driver.get("https://demo.nopcommerce.com/");
-	  homePage = new HomePageObject(driver);
 	  
 	  driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	  

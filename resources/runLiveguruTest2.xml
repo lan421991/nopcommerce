@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="LiveGuru">
+  <parameter name ="url" value ="http://live.techpanda.org/index.php/"/>
+  
+  <test name="Run on chrome">
+  <parameter name = "browser"  value = "chrome" />
+    <classes>
+      <class name="com.liveguru.user.LoginLiveGuru"/>
+    </classes>
+  </test> 
+  
+</suite> <!-- Suite -->
