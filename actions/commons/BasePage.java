@@ -14,6 +14,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObjects.nopcommerce.user.UserAddressPageObject;
+import pageObjects.nopcommerce.user.UserCustomerInforPageObject;
+import pageObjects.nopcommerce.user.UserHomePageObject;
+import pageObjects.nopcommerce.user.UserMyProductReviewPageObject;
+import pageObjects.nopcommerce.user.UserPageGeneratorManager;
+import pageObjects.nopcommerce.user.UserRewardPointPageObject;
+import pageUIs.nopcommerce.BasePageUI;
+import pageUIs.nopcommerce.LoginPageUI;
+
 public class BasePage {
 // chứa các hàm dùng dung cho 1 page của application
 	public static BasePage getBasePageObject() {
@@ -298,6 +307,30 @@ public class BasePage {
 	public void waitForElementClickEnable(WebDriver driver,String xpathlocator) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(xpathlocator)));
+	}
+	
+	public UserAddressPageObject openAddressPage(WebDriver driver) {
+		waitForElementClickEnable(driver, BasePageUI.ADDRESS_LINK);
+		clickToElement(driver,BasePageUI.ADDRESS_LINK);
+		return UserPageGeneratorManager.getAddressPage(driver);
+	}
+	
+	public UserMyProductReviewPageObject openMyProductReviewPage(WebDriver driver) {
+		waitForElementClickEnable(driver, BasePageUI.MY_PRODUCT_REVIEW_LINK);
+		clickToElement(driver,BasePageUI.MY_PRODUCT_REVIEW_LINK);
+		return UserPageGeneratorManager.getMyProductReviewPage(driver);
+	}
+	
+	public UserRewardPointPageObject openRewardPointPage(WebDriver driver) {
+		waitForElementClickEnable(driver, BasePageUI.REWARD_POINT_LINK);
+		clickToElement(driver,BasePageUI.REWARD_POINT_LINK);
+		return UserPageGeneratorManager.getRewardPointPage(driver);
+	}
+	
+	public UserCustomerInforPageObject openCustomerInforPage(WebDriver driver) {
+		waitForElementClickEnable(driver, BasePageUI.CUSTOMER_INFOR_LINK);
+		clickToElement(driver,BasePageUI.CUSTOMER_INFOR_LINK);
+		return UserPageGeneratorManager.getCustomerInforPage(driver);
 	}
 	
 	private long longTimeout = 30;

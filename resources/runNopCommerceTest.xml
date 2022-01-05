@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="NopCommerce">
-
+	<parameter name ="url" value = "https://demo.nopcommerce.com/"/>
     <test name="Run on chrome">
   <parameter name = "browser"  value = "chrome" />
     <classes>
-      <class name="com.nopcommerce.user.Level_06_Page_Generator_Manager_II"/>
+      <class name="com.nopcommerce.user.Level_07_Switch_Page"/>
     </classes>
   </test> Test
   

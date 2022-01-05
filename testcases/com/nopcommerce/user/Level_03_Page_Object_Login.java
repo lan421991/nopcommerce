@@ -11,17 +11,17 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import commons.BasePage;
-import pageObjects.nopcommerce.HomePageObject;
-import pageObjects.nopcommerce.LoginPageObject;
-import pageObjects.nopcommerce.RegisterPageObject;
+import pageObjects.nopcommerce.user.UserHomePageObject;
+import pageObjects.nopcommerce.user.UserLoginPageObject;
+import pageObjects.nopcommerce.user.UserRegisterPageObject;
 
 public class Level_03_Page_Object_Login{
 	  
 		private WebDriver driver;
 		private String firstName, lastName, invalidEmail, notFoundEmail, exitingEmail, validPassword,inValidPassword;
-		private HomePageObject homePage;
-		private LoginPageObject loginPage;
-		private RegisterPageObject registerPage;
+		private UserHomePageObject homePage;
+		private UserLoginPageObject loginPage;
+		private UserRegisterPageObject registerPage;
 		private String projectPath = System.getProperty("user.dir");
 	
   @BeforeClass
@@ -29,8 +29,8 @@ public class Level_03_Page_Object_Login{
 	  System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
 	  driver = new FirefoxDriver();
 	  
-	  homePage = new HomePageObject(driver);
-	  registerPage = new RegisterPageObject(driver);
+	  homePage = new UserHomePageObject(driver);
+	  registerPage = new UserRegisterPageObject(driver);
 
 	  
 	  driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
@@ -67,16 +67,16 @@ public class Level_03_Page_Object_Login{
 
   @Test
   public void Login_01_Empty_Data() {
-	  homePage.clicktoLoginLink();
-	  loginPage = new LoginPageObject(driver);
+	  homePage.openToLoginPage();
+	  loginPage = new UserLoginPageObject(driver);
 	  loginPage.clickToLoginButton();
 	  Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Please enter your email"); 
   	}
   
   @Test
   public void Login_02_Invalid_Email() {
-	  homePage.clicktoLoginLink();
-	  loginPage = new LoginPageObject(driver);
+	  homePage.openToLoginPage();
+	  loginPage = new UserLoginPageObject(driver);
 	  loginPage.inputEmailTextbox(invalidEmail);
 	  loginPage.clickToLoginButton();
 	  Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Wrong email"); 
@@ -84,8 +84,8 @@ public class Level_03_Page_Object_Login{
   
   @Test
   public void Login_03_Email_Not_Found() {
-	  homePage.clicktoLoginLink();
-	  loginPage = new LoginPageObject(driver);
+	  homePage.openToLoginPage();
+	  loginPage = new UserLoginPageObject(driver);
 	  loginPage.inputEmailTextbox(notFoundEmail);
 	  loginPage.clickToLoginButton();
 	  Assert.assertEquals(loginPage.getErrorMessageUnsuccessfull(), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found"); 
@@ -93,8 +93,8 @@ public class Level_03_Page_Object_Login{
   	
   @Test
   public void Login_04_Exiting_Email_Empty_Password() {
-	  homePage.clicktoLoginLink();
-	  loginPage = new LoginPageObject(driver);
+	  homePage.openToLoginPage();
+	  loginPage = new UserLoginPageObject(driver);
 	  loginPage.inputEmailTextbox(exitingEmail);
 	  loginPage.inputToPasswordTextbox("");
 	  loginPage.clickToLoginButton();
@@ -103,8 +103,8 @@ public class Level_03_Page_Object_Login{
   
   @Test
   public void Login_05_Exiting_Email_Incorrect_Password() {
-	  homePage.clicktoLoginLink();
-	  loginPage = new LoginPageObject(driver);
+	  homePage.openToLoginPage();
+	  loginPage = new UserLoginPageObject(driver);
 	  loginPage.inputEmailTextbox(exitingEmail);
 	  loginPage.inputToPasswordTextbox(inValidPassword);
 	  loginPage.clickToLoginButton();
@@ -113,12 +113,12 @@ public class Level_03_Page_Object_Login{
   
   @Test
   public void Login_06_Valid_Email_Password() {
-	  homePage.clicktoLoginLink();
-	  loginPage = new LoginPageObject(driver);
+	  homePage.openToLoginPage();
+	  loginPage = new UserLoginPageObject(driver);
 	  loginPage.inputEmailTextbox(exitingEmail);
 	  loginPage.inputToPasswordTextbox(validPassword);
 	  loginPage.clickToLoginButton();
-	  homePage = new HomePageObject(driver);
+	  homePage = new UserHomePageObject(driver);
 	  Assert.assertTrue(homePage.isMyAccountLimkDisplayed()); 
   	}
   

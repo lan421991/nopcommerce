@@ -1,14 +1,14 @@
-package pageObjects.liveguru;
+package pageObjects.liveguru.user;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
 import pageUIs.liveguru.MyDasgboardUI;
 
-public class MyDashboardPageObject extends BasePage{
+public class UserMyDashboardPageObjectGuru extends BasePage{
 	private WebDriver driver;
 
-	public MyDashboardPageObject(WebDriver driver) {
+	public UserMyDashboardPageObjectGuru(WebDriver driver) {
 		this.driver = driver;
 	}
 
@@ -27,10 +27,10 @@ public class MyDashboardPageObject extends BasePage{
 		clickToElement(driver, MyDasgboardUI.ACCOUNT_LINK);
 	}
 
-	public HomePageObject clickToLogoutLink() {
+	public UserHomePageObjectGuru clickToLogoutLink() {
 		waitForElementClickEnable(driver, MyDasgboardUI.LOGOUT_LINK);
 		clickToElement(driver, MyDasgboardUI.LOGOUT_LINK);
-		return PageGeneratorManager.getHomePage(driver);
+		return UserPageGeneratorManagerGuru.getHomePage(driver);
 	}
 	
 //	String contactInformation = driver.findElement(By.xpath("//h3[text()='Contact Information']/parent::div//following-sibling::div[@class='box-content']/p")).getText();

@@ -25,15 +25,14 @@ public class Level_05_Page_Factory extends BaseTest{
 		private RegisterPageObject registerPage;
 		//private String projectPath = System.getProperty("user.dir");
 	
-	@Parameters("browser")
+	@Parameters({"browser","url"})
 	@BeforeClass
-	public void beforeClass(String browserName) {
-	  driver = getBrowserDriver(browserName);
+	public void beforeClass(String browserName, String url) {
+	  driver = getBrowserDriver(browserName,url);
 	  
 	  homePage = new HomePageObject(driver);
 	  registerPage = new RegisterPageObject(driver);
 
-	  
 	  driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	  driver.get("https://demo.nopcommerce.com/");
 	  

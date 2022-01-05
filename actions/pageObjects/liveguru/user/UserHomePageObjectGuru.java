@@ -1,14 +1,14 @@
-package pageObjects.liveguru;
+package pageObjects.liveguru.user;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
 import pageUIs.liveguru.HomePageUI;
 
-public class HomePageObject extends BasePage{
+public class UserHomePageObjectGuru extends BasePage{
 	private WebDriver driver;
 
-	public HomePageObject(WebDriver driver) {
+	public UserHomePageObjectGuru(WebDriver driver) {
 		this.driver = driver;
 	}
 
@@ -17,10 +17,10 @@ public class HomePageObject extends BasePage{
 		clickToElement(driver, HomePageUI.ACCOUNT_LINK);
 	}
 
-	public LoginPageObject clickToMyAccountLink() {
+	public UserLoginPageObjectGuru clickToMyAccountLink() {
 		waitForElementClickEnable(driver, HomePageUI.MY_ACCOUNT_LINK);
 		clickToElement(driver, HomePageUI.MY_ACCOUNT_LINK);
-		return PageGeneratorManager.getLoginPage(driver);
+		return UserPageGeneratorManagerGuru.getLoginPage(driver);
 	}
 
 }

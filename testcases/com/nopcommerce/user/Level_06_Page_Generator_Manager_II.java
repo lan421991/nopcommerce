@@ -13,11 +13,11 @@ import org.testng.annotations.Test;
 
 import commons.BasePage;
 import commons.BaseTest;
-import pageObjects.nopcommerce.HomePageObject;
-import pageObjects.nopcommerce.LoginPageObject;
-import pageObjects.nopcommerce.MyAccountPageObject;
-import pageObjects.nopcommerce.PageGeneratorManager;
-import pageObjects.nopcommerce.RegisterPageObject;
+import pageObjects.nopcommerce.user.UserCustomerInforPageObject;
+import pageObjects.nopcommerce.user.UserHomePageObject;
+import pageObjects.nopcommerce.user.UserLoginPageObject;
+import pageObjects.nopcommerce.user.UserPageGeneratorManager;
+import pageObjects.nopcommerce.user.UserRegisterPageObject;
 
 public class Level_06_Page_Generator_Manager_II extends BaseTest{
 
@@ -25,7 +25,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
 	@BeforeClass
 	public void beforeClass(String browserName, String url) {
 	  driver = getBrowserDriver(browserName,url);
-	  homePage = PageGeneratorManager.getHomePage(driver);
+	  homePage = UserPageGeneratorManager.getHomePage(driver);
 	  
 	  firstName = "Automation";
 	  lastName = "FC";
@@ -59,14 +59,14 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
 
   @Test
   public void Login_01_Empty_Data() {
-	  loginPage = homePage.clicktoLoginLink();
+	  loginPage = homePage.openToLoginPage();
 	  loginPage.clickToLoginButton();
 	  Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Please enter your email"); 
   	}
   
   @Test
   public void Login_02_Invalid_Email() {
-	  loginPage = homePage.clicktoLoginLink();
+	  loginPage = homePage.openToLoginPage();
 	  loginPage.inputEmailTextbox(invalidEmail);
 	  loginPage.clickToLoginButton();
 	  Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Wrong email"); 
@@ -74,7 +74,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
   
   @Test
   public void Login_03_Email_Not_Found() {
-	  loginPage = homePage.clicktoLoginLink();
+	  loginPage = homePage.openToLoginPage();
 	  loginPage.inputEmailTextbox(notFoundEmail);
 	  loginPage.clickToLoginButton();
 	  Assert.assertEquals(loginPage.getErrorMessageUnsuccessfull(), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found"); 
@@ -82,7 +82,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
   	
   @Test
   public void Login_04_Exiting_Email_Empty_Password() {
-	  loginPage = homePage.clicktoLoginLink();
+	  loginPage = homePage.openToLoginPage();
 	  loginPage.inputEmailTextbox(exitingEmail);
 	  loginPage.inputToPasswordTextbox("");
 	  loginPage.clickToLoginButton();
@@ -91,7 +91,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
   
   @Test
   public void Login_05_Exiting_Email_Incorrect_Password() {
-	  loginPage = homePage.clicktoLoginLink();
+	  loginPage = homePage.openToLoginPage();
 	  loginPage.inputEmailTextbox(exitingEmail);
 	  loginPage.inputToPasswordTextbox(inValidPassword);
 	  loginPage.clickToLoginButton();
@@ -100,7 +100,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
   
   @Test
   public void Login_06_Valid_Email_Password() {
-	  loginPage = homePage.clicktoLoginLink();
+	  loginPage = homePage.openToLoginPage();
 	  loginPage.inputEmailTextbox(exitingEmail);
 	  loginPage.inputToPasswordTextbox(validPassword);
 	  homePage = loginPage.clickToLoginButton();
@@ -120,8 +120,8 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
   
 	private WebDriver driver;
 	private String firstName, lastName, invalidEmail, notFoundEmail, exitingEmail, validPassword,inValidPassword;
-	private HomePageObject homePage;
-	private LoginPageObject loginPage;
-	private RegisterPageObject registerPage;
-	private MyAccountPageObject myAccountPage;
+	private UserHomePageObject homePage;
+	private UserLoginPageObject loginPage;
+	private UserRegisterPageObject registerPage;
+	private UserCustomerInforPageObject myAccountPage;
 }

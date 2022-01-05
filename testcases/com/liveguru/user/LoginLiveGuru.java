@@ -10,11 +10,11 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.liveguru.LoginPageObject;
-import pageObjects.liveguru.RegisterPageObject;
-import pageObjects.liveguru.HomePageObject;
-import pageObjects.liveguru.MyDashboardPageObject;
-import pageObjects.liveguru.PageGeneratorManager;
+import pageObjects.liveguru.user.UserHomePageObjectGuru;
+import pageObjects.liveguru.user.UserLoginPageObjectGuru;
+import pageObjects.liveguru.user.UserMyDashboardPageObjectGuru;
+import pageObjects.liveguru.user.UserPageGeneratorManagerGuru;
+import pageObjects.liveguru.user.UserRegisterPageObjectGuru;
 
 public class LoginLiveGuru extends BaseTest {
 	
@@ -22,7 +22,7 @@ public class LoginLiveGuru extends BaseTest {
 	@BeforeClass
 	public void beforeClass(String browserName, String url) {
 		driver = getBrowserDriver(browserName, url);
-		homePage = PageGeneratorManager.getHomePage(driver);
+		homePage = UserPageGeneratorManagerGuru.getHomePage(driver);
 		
 		fisrtName = "Automation";
 		middleName = "and";
@@ -71,9 +71,9 @@ public class LoginLiveGuru extends BaseTest {
 	}
 	
 	private WebDriver driver;
-	private HomePageObject homePage;
-	private LoginPageObject loginPage;
-	private RegisterPageObject registerPage;
-	private MyDashboardPageObject myDashboardPage;
+	private UserHomePageObjectGuru homePage;
+	private UserLoginPageObjectGuru loginPage;
+	private UserRegisterPageObjectGuru registerPage;
+	private UserMyDashboardPageObjectGuru myDashboardPage;
 	private String fisrtName, middleName, lastName, email, password, fullName;
 }
