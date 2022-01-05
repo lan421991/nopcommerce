@@ -4,6 +4,6 @@ public class Dog {
 	Animal animal = new Animal();//instance//object
 
 	public void showProperty(){
-		System.out.println(animal.); 
+		System.out.println(); 
 	}
 }

@@ -13,10 +13,10 @@ import org.testng.annotations.Test;
 
 import commons.BasePage;
 import commons.BaseTest;
+import commons.PageGeneratorManager;
 import pageObjects.nopcommerce.user.UserCustomerInforPageObject;
 import pageObjects.nopcommerce.user.UserHomePageObject;
 import pageObjects.nopcommerce.user.UserLoginPageObject;
-import pageObjects.nopcommerce.user.UserPageGeneratorManager;
 import pageObjects.nopcommerce.user.UserRegisterPageObject;
 
 public class Level_06_Page_Generator_Manager_II extends BaseTest{
@@ -25,7 +25,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
 	@BeforeClass
 	public void beforeClass(String browserName, String url) {
 	  driver = getBrowserDriver(browserName,url);
-	  homePage = UserPageGeneratorManager.getHomePage(driver);
+	  homePage = PageGeneratorManager.getUserHomePage(driver);
 	  
 	  firstName = "Automation";
 	  lastName = "FC";
@@ -36,7 +36,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
 	  inValidPassword = "654321";
 	  
 	  System.out.println("PreCondition - Step 01 : Click register link"); 
-	  registerPage = homePage.clickToRegisterLink();
+	  registerPage = homePage.openRegisterPage();
 
 	  System.out.println("PreCondition - Step 02: Input to required fields"); 
 	  registerPage.inputToFirstNameTextbox(firstName);
@@ -59,14 +59,14 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
 
   @Test
   public void Login_01_Empty_Data() {
-	  loginPage = homePage.openToLoginPage();
+	  loginPage = homePage.openLoginPage();
 	  loginPage.clickToLoginButton();
 	  Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Please enter your email"); 
   	}
   
   @Test
   public void Login_02_Invalid_Email() {
-	  loginPage = homePage.openToLoginPage();
+	  loginPage = homePage.openLoginPage();
 	  loginPage.inputEmailTextbox(invalidEmail);
 	  loginPage.clickToLoginButton();
 	  Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Wrong email"); 
@@ -74,7 +74,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
   
   @Test
   public void Login_03_Email_Not_Found() {
-	  loginPage = homePage.openToLoginPage();
+	  loginPage = homePage.openLoginPage();
 	  loginPage.inputEmailTextbox(notFoundEmail);
 	  loginPage.clickToLoginButton();
 	  Assert.assertEquals(loginPage.getErrorMessageUnsuccessfull(), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found"); 
@@ -82,7 +82,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
   	
   @Test
   public void Login_04_Exiting_Email_Empty_Password() {
-	  loginPage = homePage.openToLoginPage();
+	  loginPage = homePage.openLoginPage();
 	  loginPage.inputEmailTextbox(exitingEmail);
 	  loginPage.inputToPasswordTextbox("");
 	  loginPage.clickToLoginButton();
@@ -91,7 +91,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
   
   @Test
   public void Login_05_Exiting_Email_Incorrect_Password() {
-	  loginPage = homePage.openToLoginPage();
+	  loginPage = homePage.openLoginPage();
 	  loginPage.inputEmailTextbox(exitingEmail);
 	  loginPage.inputToPasswordTextbox(inValidPassword);
 	  loginPage.clickToLoginButton();
@@ -100,12 +100,12 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
   
   @Test
   public void Login_06_Valid_Email_Password() {
-	  loginPage = homePage.openToLoginPage();
+	  loginPage = homePage.openLoginPage();
 	  loginPage.inputEmailTextbox(exitingEmail);
 	  loginPage.inputToPasswordTextbox(validPassword);
 	  homePage = loginPage.clickToLoginButton();
-	  Assert.assertTrue(homePage.isMyAccountLimkDisplayed());
-	  myAccountPage = homePage.clickToMyAccount();
+	  Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
+	  myAccountPage = homePage.openMyAccountPage();
   	}
   
   public int genarateFakeNumber() {

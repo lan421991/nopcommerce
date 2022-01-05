@@ -45,7 +45,7 @@ public class Level_03_Page_Object_Login{
 	  inValidPassword = "654321";
 	  
 	  System.out.println("PreCondition - Step 01 : Click register link"); 
-	  homePage.clickToRegisterLink();
+	  homePage.openRegisterPage();
 	  
 	  System.out.println("PreCondition - Step 02: Input to required fields"); 
 	  registerPage.inputToFirstNameTextbox(firstName);
@@ -67,7 +67,7 @@ public class Level_03_Page_Object_Login{
 
   @Test
   public void Login_01_Empty_Data() {
-	  homePage.openToLoginPage();
+	  homePage.openLoginPage();
 	  loginPage = new UserLoginPageObject(driver);
 	  loginPage.clickToLoginButton();
 	  Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Please enter your email"); 
@@ -75,7 +75,7 @@ public class Level_03_Page_Object_Login{
   
   @Test
   public void Login_02_Invalid_Email() {
-	  homePage.openToLoginPage();
+	  homePage.openLoginPage();
 	  loginPage = new UserLoginPageObject(driver);
 	  loginPage.inputEmailTextbox(invalidEmail);
 	  loginPage.clickToLoginButton();
@@ -84,7 +84,7 @@ public class Level_03_Page_Object_Login{
   
   @Test
   public void Login_03_Email_Not_Found() {
-	  homePage.openToLoginPage();
+	  homePage.openLoginPage();
 	  loginPage = new UserLoginPageObject(driver);
 	  loginPage.inputEmailTextbox(notFoundEmail);
 	  loginPage.clickToLoginButton();
@@ -93,7 +93,7 @@ public class Level_03_Page_Object_Login{
   	
   @Test
   public void Login_04_Exiting_Email_Empty_Password() {
-	  homePage.openToLoginPage();
+	  homePage.openLoginPage();
 	  loginPage = new UserLoginPageObject(driver);
 	  loginPage.inputEmailTextbox(exitingEmail);
 	  loginPage.inputToPasswordTextbox("");
@@ -103,7 +103,7 @@ public class Level_03_Page_Object_Login{
   
   @Test
   public void Login_05_Exiting_Email_Incorrect_Password() {
-	  homePage.openToLoginPage();
+	  homePage.openLoginPage();
 	  loginPage = new UserLoginPageObject(driver);
 	  loginPage.inputEmailTextbox(exitingEmail);
 	  loginPage.inputToPasswordTextbox(inValidPassword);
@@ -113,13 +113,13 @@ public class Level_03_Page_Object_Login{
   
   @Test
   public void Login_06_Valid_Email_Password() {
-	  homePage.openToLoginPage();
+	  homePage.openLoginPage();
 	  loginPage = new UserLoginPageObject(driver);
 	  loginPage.inputEmailTextbox(exitingEmail);
 	  loginPage.inputToPasswordTextbox(validPassword);
 	  loginPage.clickToLoginButton();
 	  homePage = new UserHomePageObject(driver);
-	  Assert.assertTrue(homePage.isMyAccountLimkDisplayed()); 
+	  Assert.assertTrue(homePage.isMyAccountLinkDisplayed()); 
   	}
   
   public int genarateFakeNumber() {

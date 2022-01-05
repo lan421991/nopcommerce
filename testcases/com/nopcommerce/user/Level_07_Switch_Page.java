@@ -9,12 +9,12 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
+import commons.PageGeneratorManager;
 import pageObjects.nopcommerce.user.UserAddressPageObject;
 import pageObjects.nopcommerce.user.UserCustomerInforPageObject;
 import pageObjects.nopcommerce.user.UserHomePageObject;
 import pageObjects.nopcommerce.user.UserLoginPageObject;
 import pageObjects.nopcommerce.user.UserMyProductReviewPageObject;
-import pageObjects.nopcommerce.user.UserPageGeneratorManager;
 import pageObjects.nopcommerce.user.UserRegisterPageObject;
 import pageObjects.nopcommerce.user.UserRewardPointPageObject;
 
@@ -24,17 +24,18 @@ public class Level_07_Switch_Page extends BaseTest{
 	@BeforeClass
 	public void beforeClass(String browserName, String url) {
 	  driver = getBrowserDriver(browserName,url);
-	  homePage = UserPageGeneratorManager.getHomePage(driver);
+	  homePage = PageGeneratorManager.getUserHomePage(driver);
 	  
 	  firstName = "Automation";
 	  lastName = "FC";
 	  Email = "fc" + genarateFakeNumber() + "@gmail.com";
+	  System.out.println(Email); 
 	  validPassword = "123456";
   	}
 
   @Test
   public void User_01_Register() {
-	  registerPage = homePage.clickToRegisterLink();
+	  registerPage = homePage.openRegisterPage();
 	  registerPage.inputToFirstNameTextbox(firstName);
 	  registerPage.inputToLastNameTextbox(lastName);
 	  registerPage.inputToEmailTextbox(Email);
@@ -47,16 +48,16 @@ public class Level_07_Switch_Page extends BaseTest{
   
   @Test
   public void User_02_Login() {
-	  loginPage = homePage.openToLoginPage();
+	  loginPage = homePage.openLoginPage();
 	  loginPage.inputEmailTextbox(Email);
 	  loginPage.inputToPasswordTextbox(validPassword);
 	  homePage = loginPage.clickToLoginButton();
-	  Assert.assertTrue(homePage.isMyAccountLimkDisplayed());
+	  Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
   	}
   
   @Test
   public void User_03_Customer_Infor() {
-	  customerInforPage = homePage.clickToMyAccount();
+	  customerInforPage = homePage.openMyAccountPage();
 	  Assert.assertTrue(customerInforPage.isCustomerInforDisplayed()); 
   	}
   

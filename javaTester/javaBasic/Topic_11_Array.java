@@ -1,6 +1,6 @@
 package javaBasic;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Topic_11_Array {
@@ -14,7 +14,7 @@ public class Topic_11_Array {
 
 
 	public static void main(String[] args) {
-		int number[] = {12,7,5,61,15};
+		//int number[] = {12,7,5,61,15};
 		int[] student = {12,7,5,61,15};
 		System.out.println(student[0]); 
 		System.out.println(student[1]); 
@@ -38,7 +38,7 @@ public class Topic_11_Array {
 			}
 		}
 		
-		ArrayList<String> stdName = new ArrayList<String>();
+//		ArrayList<String> stdName = new ArrayList<String>();
 		for (String std : studentName) {
 			if (std.equals("long")) {
 				System.out.println("click vào long"); 
@@ -46,7 +46,7 @@ public class Topic_11_Array {
 		}
 		
 		//nhân đôi mảng
-		String newStudentName[] = studentName.clone();
+//		String newStudentName[] = studentName.clone();
 		
 		String std_Name = Arrays.toString(studentName);
 		System.out.println(std_Name); 

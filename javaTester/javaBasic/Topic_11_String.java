@@ -1,7 +1,7 @@
 package javaBasic;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Topic_11_String {
 
@@ -77,12 +77,7 @@ public class Topic_11_String {
 		//Dynamic locator
 		//Đại diện cho 1 chuỗi %s
 		//%b %t %d
-		String dynaminButtonXpath = "//button[@id='%s']";
-		System.out.println("Click to Login button" + dynaminButtonXpath.format(dynaminButtonXpath, "login")); 
-		System.out.println("Click to Search button" + dynaminButtonXpath.format(dynaminButtonXpath, "search")); 
-		System.out.println("Click to Register button" + dynaminButtonXpath.format(dynaminButtonXpath, "register")); 
-		
-		
+//		String dynaminButtonXpath = "//button[@id='%s']";
 	}
 
 }

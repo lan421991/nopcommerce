@@ -4,7 +4,7 @@ public class Topic_01_Varible {
 	
 	//hàm khởi tạo không có kiểu trả về, không có tham số, trùng tên class
 	public Topic_01_Varible() {
-		String studentName;
+//		String studentName;
 	}
 	
 	static int studentNumber;
