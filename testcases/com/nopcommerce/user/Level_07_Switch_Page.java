@@ -20,10 +20,10 @@ import pageObjects.nopcommerce.user.UserRewardPointPageObject;
 
 public class Level_07_Switch_Page extends BaseTest{
 
-	@Parameters({"browser","url"})
+	@Parameters({"browser","enviromentName"})
 	@BeforeClass
-	public void beforeClass(String browserName, String url) {
-	  driver = getBrowserDriver(browserName,url);
+	public void beforeClass(String browserName, String enviromentName) {
+	  driver = getBrowserDriver(browserName,enviromentName);
 	  homePage = PageGeneratorManager.getUserHomePage(driver);
 	  
 	  firstName = "Automation";

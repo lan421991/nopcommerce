@@ -6,6 +6,7 @@ import java.util.Set;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -178,7 +179,6 @@ public class BasePage {
 		return select.isMultiple();
 	}
 	
-	
 	public void selectItemInDropdown(WebDriver driver,String parentXpath, String childXpath, String expectedText) {
 		getWebElement(driver,parentXpath).click();
 		sleepInSecond(1);
@@ -285,6 +285,26 @@ public class BasePage {
 		action.moveToElement(getWebElement(driver, LocatorType)).perform();
 	}
 	
+	public void rightClickToElement(WebDriver driver, String LocatorType) {
+		Actions action = new Actions(driver);
+		action.contextClick(getWebElement(driver, LocatorType)).perform();
+	}
+	
+	public void dragAndDropElement(WebDriver driver, String sourceLocatorType, String targetLocatorType) {
+		Actions action = new Actions(driver);
+		action.dragAndDrop(getWebElement(driver, sourceLocatorType),getWebElement(driver, targetLocatorType)).perform();
+	}
+	
+	public void pressKeyToElement(WebDriver driver, String LocatorType, Keys key) {
+		Actions action = new Actions(driver);
+		action.sendKeys(getWebElement(driver, LocatorType),key).perform();
+	}
+	
+	public void pressKeyToElement(WebDriver driver, String LocatorType, Keys key, String...dynamicValues) {
+		Actions action = new Actions(driver);
+		action.sendKeys(getWebElement(driver, getDynamicXpath(LocatorType,dynamicValues)),key).perform();
+	}
+	
 	public void scrollToBottomPage(WebDriver driver) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 		jsExecutor.executeScript("window.scrollBy(0,document.body.scrollHeight)");
@@ -292,7 +312,7 @@ public class BasePage {
 
 	public void hightlightElement(WebDriver driver,String LocatorType) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-		WebElement element =getWebElement(driver, LocatorType);
+		WebElement element = getWebElement(driver, LocatorType);
 		String originalStyle = element.getAttribute("style");
 		jsExecutor.executeScript("arguments[0].setAttribute('style', arguments[1])", element, "border: 2px solid red; border-style: dashed;");
 		sleepInSecond(1);
@@ -435,5 +455,5 @@ public class BasePage {
 		return PageGeneratorManager.getAdminLoginPage(driver);
 	}
 	
-	private long longTimeout = 30;
+	private long longTimeout = GlobalConstants.LONG_TIME_OUT;
 }

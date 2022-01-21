@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="DataTable">
+<suite name="NopCommerce">
 	<parameter name ="enviromentName" value = "dev"/>
     <test name="Run on chrome">
   <parameter name = "browser"  value = "chrome" />
     <classes>
-      <class name="com.jquery.datatable.Level_10_DataTable"/>
+      <class name="com.nopcommerce.user.Level_09_Dynamic_Locator"/>
     </classes>
-  </test> 
+  </test> Test
   
 </suite> <!-- Suite -->
