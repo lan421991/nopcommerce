@@ -10,8 +10,8 @@ import org.testng.annotations.Test;
 import commons.BaseTest;
 import commons.GlobalConstants;
 import commons.PageGeneratorManager;
-import pageObjects.nopcommerce.Admin.AdminDashBoardPageObject;
-import pageObjects.nopcommerce.Admin.AdminLoginPageObject;
+import pageObjects.nopcommerce.Admin.DashBoardPO;
+import pageObjects.nopcommerce.Admin.LoginPO;
 import pageObjects.nopcommerce.user.UserCustomerInforPageObject;
 import pageObjects.nopcommerce.user.UserHomePageObject;
 import pageObjects.nopcommerce.user.UserLoginPageObject;
@@ -64,6 +64,6 @@ public class Level_07_Switch_Role extends BaseTest{
 	private UserHomePageObject userHomePage;
 	private UserLoginPageObject userLoginPage;
 	private UserCustomerInforPageObject userCustomerInforPage;
-	private AdminLoginPageObject adminLoginPage;
-	private AdminDashBoardPageObject adminDashBoardPage;
+	private LoginPO adminLoginPage;
+	private DashBoardPO adminDashBoardPage;
 }

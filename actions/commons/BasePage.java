@@ -15,12 +15,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pageObjects.nopcommerce.Admin.AdminLoginPageObject;
+import pageObjects.nopcommerce.Admin.LoginPO;
+import pageObjects.nopcommerce.Admin.ProductSearchPO;
 import pageObjects.nopcommerce.user.UserAddressPageObject;
 import pageObjects.nopcommerce.user.UserCustomerInforPageObject;
 import pageObjects.nopcommerce.user.UserHomePageObject;
 import pageObjects.nopcommerce.user.UserMyProductReviewPageObject;
 import pageObjects.nopcommerce.user.UserRewardPointPageObject;
+import pageUIs.nopcommerce.admin.AdminBasePageUI;
 import pageUIs.nopcommerce.user.BasePageUI;
 import pageUIs.nopcommerce.user.LoginPageUI;
 
@@ -61,6 +63,7 @@ public class BasePage {
 	
 	public void acceptAlert(WebDriver driver) {
 		waitForAlertPresence(driver).accept();
+		sleepInSecond(2);
 	}
 	
 	public void cancelAlert(WebDriver driver) {
@@ -133,6 +136,10 @@ public class BasePage {
 	
 	private WebElement getWebElement(WebDriver driver, String LocatorType) {
 		return driver.findElement(getByLocator(LocatorType));
+	}	
+	
+	private WebElement getWebElement(WebDriver driver, String LocatorType, String...dynamicValues) {
+		return driver.findElement(getByLocator(getDynamicXpath(LocatorType,dynamicValues)));
 	}	
 	
 	private List<WebElement> getListElement(WebDriver driver, String LocatorType) {
@@ -396,7 +403,8 @@ public class BasePage {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(LocatorType,dynamicValues))));
 	}	
-	//tối ưu ở switch page
+
+// User nopcommerce
 	public UserCustomerInforPageObject openCustomerInforPage(WebDriver driver) {
 		waitForElementClickEnable(driver, BasePageUI.CUSTOMER_INFOR_LINK);
 		clickToElement(driver,BasePageUI.CUSTOMER_INFOR_LINK);
@@ -449,11 +457,36 @@ public class BasePage {
 		return PageGeneratorManager.getUserHomePage(driver);
 	}
 	
-	public AdminLoginPageObject clickToLogoutLinkAtAdminPage(WebDriver driver) {
+	// Admin Nopcommerce
+	public LoginPO clickToLogoutLinkAtAdminPage(WebDriver driver) {
 		waitForElementClickEnable(driver, BasePageUI.LOGOUT_LINK_AT_ADMIN);
 		clickToElement(driver,BasePageUI.LOGOUT_LINK_AT_ADMIN);
 		return PageGeneratorManager.getAdminLoginPage(driver);
 	}
 	
+	public void openSubMenuPage(WebDriver driver,String menuPageName, String subMenuPageName) {
+		waitForElementClickEnable(driver,AdminBasePageUI.MENU_LINK_BY_NAME, menuPageName);
+		clickToElement(driver, AdminBasePageUI.MENU_LINK_BY_NAME, menuPageName);
+		
+		waitForElementClickEnable(driver,AdminBasePageUI.SUB_MENU_LINKBY_NAME, subMenuPageName);
+		clickToElement(driver, AdminBasePageUI.SUB_MENU_LINKBY_NAME, subMenuPageName);
+	}
+	
+	public void uploadFileByCardName(WebDriver driver,String cardName, String...fileNames) {
+		//String filePath = System.getProperty("user.dir") + "\\uploadFiles\\";
+		String filePath = GlobalConstants.PROJECT_PATH + "\\uploadFiles\\";
+		String fullFileName = "";
+		for(String file:fileNames) {
+			fullFileName = fullFileName + filePath + file + "\n";
+		}
+		fullFileName = fullFileName.trim();
+		getWebElement(driver, AdminBasePageUI.UPLOAD_FILE_BY_CARD_NAME, cardName).sendKeys(fullFileName);
+	}
+
+	public boolean isMessageDisplayedInEmptyTable(WebDriver driver, String tableName) {
+		waitForElementVisible(driver, AdminBasePageUI.NO_DATA_MESSAGE_TABLE_NAME, tableName);
+		return isElementDisplayed(driver, AdminBasePageUI.NO_DATA_MESSAGE_TABLE_NAME, tableName);
+	}
+
 	private long longTimeout = GlobalConstants.LONG_TIME_OUT;
 }

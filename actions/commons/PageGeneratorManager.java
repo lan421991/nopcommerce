@@ -2,8 +2,8 @@ package commons;
 
 import org.openqa.selenium.WebDriver;
 
-import pageObjects.nopcommerce.Admin.AdminDashBoardPageObject;
-import pageObjects.nopcommerce.Admin.AdminLoginPageObject;
+import pageObjects.nopcommerce.Admin.DashBoardPO;
+import pageObjects.nopcommerce.Admin.LoginPO;
 import pageObjects.nopcommerce.user.UserAddressPageObject;
 import pageObjects.nopcommerce.user.UserCustomerInforPageObject;
 import pageObjects.nopcommerce.user.UserHomePageObject;
@@ -42,11 +42,11 @@ public class PageGeneratorManager {
 		return new UserRewardPointPageObject(driver);
 	}
 	
-	public static AdminLoginPageObject getAdminLoginPage(WebDriver driver) {
-		return new AdminLoginPageObject(driver);
+	public static LoginPO getAdminLoginPage(WebDriver driver) {
+		return new LoginPO(driver);
 	}
 	
-	public static AdminDashBoardPageObject getAdminDashBoardPage(WebDriver driver) {
-		return new AdminDashBoardPageObject(driver);
+	public static DashBoardPO getAdminDashBoardPage(WebDriver driver) {
+		return new DashBoardPO(driver);
 	}
 }

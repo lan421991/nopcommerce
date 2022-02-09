@@ -77,9 +77,9 @@ public class BaseTest {
 		if (enviroment == EnviromentList.DEV) {
 			envUrl = "https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid/";
 		} else if (enviroment == EnviromentList.TESTING) {
-			envUrl = "https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid/";
+			envUrl = "https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F";
 		} else if (enviroment == EnviromentList.STAGING) {
-			envUrl = "https://staging.nopcommerce.com/";
+			envUrl = "https://www.facebook.com/";
 		} else if (enviroment == EnviromentList.PRODUCTION) {
 			envUrl = "https://production.nopcommerce.com/";
 		}

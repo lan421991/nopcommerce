@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Admin">
+	<parameter name ="enviromentName" value = "testing"/>
+    <test name="Run on chrome">
+  <parameter name = "browser"  value = "chrome" />
+    <classes>
+      <class name="com.nopcommerce.admin.Level_11_Admin_Upload_File"/>
+    </classes>
+  </test> 
+  
+</suite> <!-- Suite -->
