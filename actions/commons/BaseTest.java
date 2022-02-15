@@ -79,7 +79,7 @@ public class BaseTest {
 		} else if (enviroment == EnviromentList.TESTING) {
 			envUrl = "https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F";
 		} else if (enviroment == EnviromentList.STAGING) {
-			envUrl = "https://www.facebook.com/";
+			envUrl = "https://www.facebook.com/reg/";
 		} else if (enviroment == EnviromentList.PRODUCTION) {
 			envUrl = "https://production.nopcommerce.com/";
 		}

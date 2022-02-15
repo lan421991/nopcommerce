@@ -23,7 +23,7 @@ public class GlobalConstants {
 	public static final String DB_TEST_ADMIN = "10.58.241.191:3360";
 	
 	public static final long SHORT_TIME_OUT = 5;
-	public static final long LONG_TIME_OUT = 10;
+	public static final long LONG_TIME_OUT = 30;
 	public static final long RETRY_TEST_FAIL = 3;
 	
 }

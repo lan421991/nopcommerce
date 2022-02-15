@@ -9,42 +9,61 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import commons.PageGeneratorManager;
-import pageObjects.nopcommerce.user.UserAddressPageObject;
-import pageObjects.nopcommerce.user.UserCustomerInforPageObject;
-import pageObjects.nopcommerce.user.UserHomePageObject;
-import pageObjects.nopcommerce.user.UserLoginPageObject;
-import pageObjects.nopcommerce.user.UserMyProductReviewPageObject;
-import pageObjects.nopcommerce.user.UserRegisterPageObject;
-import pageObjects.nopcommerce.user.UserRewardPointPageObject;
+import pageObjects.facebook.PageGeneratorManager;
+import pageObjects.facebook.RegisterPageObject;
+
 
 public class Level_12_Register_Login_Element_Undisplayed extends BaseTest{
-
+	private WebDriver driver;
+	String emailAddress, password;
+	RegisterPageObject registerPage;
+	
 	@Parameters({"browser","url"})
 	@BeforeClass
 	public void beforeClass(String browserName, String url) {
 	  driver = getBrowserDriver(browserName,url);
+	  registerPage = PageGeneratorManager.getRegisterPage(driver);
   	}
 	
 	@Test
-	public void Login_01_Element_Displayed() {
+	public void Register_01_Element_Displayed() {
+		Assert.assertTrue(registerPage.isEmailTextboxDisplayed());
 		
+		Assert.assertFalse(registerPage.isConfirmEmailTextboxDisplayed());
+		
+		registerPage.inputToEmailTextbox("hoa@gmail.com");
+		Assert.assertTrue(registerPage.isConfirmEmailTextboxDisplayed());
 	}
 	
 	@Test
-	public void Login_01_Element_Undisplayed_In_DOM() {
-		
+	public void Register_02_Element_Undisplayed_In_DOM() {
+		registerPage.inputToEmailTextbox("");
+		registerPage.sleepInSecond(3);
+		Assert.assertFalse(registerPage.isConfirmEmailTextboxDisplayed());
 	}
 
+	@Test
+	public void Register_03_Element_Undisplayed_Not_In_DOM() {
+		//undisplayed : invisible on UI and not in DOM
+		//isdisplayes : false(try-catch)
+		//wait maximum implicit
+		
+		//khẳng định
+		Assert.assertFalse(registerPage.isLoginButtonDisplayed());
+	}
   @Test
-  public void Login_01_Element_Undisplayed_Not_In_DOM() {
+  
+  public void Register_04_Element_Undisplayed_Not_In_DOM() {
+		//undisplayed : invisible on UI and not in DOM
+		//find elements
+		//overridetimeout
 	  
+		//phu dinh
+	  Assert.assertTrue(registerPage.isLoginButtonUnDisplayed());
   }
   
   @AfterClass
   public void afterClass() {
 	 driver.quit();
   }
-  
-	private WebDriver driver;
 }
