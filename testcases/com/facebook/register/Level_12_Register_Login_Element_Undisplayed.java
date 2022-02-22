@@ -1,6 +1,5 @@
 package com.facebook.register;
 
-import java.util.Random;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -26,41 +25,24 @@ public class Level_12_Register_Login_Element_Undisplayed extends BaseTest{
   	}
 	
 	@Test
-	public void Register_01_Element_Displayed() {
-		Assert.assertTrue(registerPage.isEmailTextboxDisplayed());
-		
-		Assert.assertFalse(registerPage.isConfirmEmailTextboxDisplayed());
+	public void Register_01_Assert() {
+		//fail lan 1
+		verifyFalse(registerPage.isEmailTextboxDisplayed());
 		
 		registerPage.inputToEmailTextbox("hoa@gmail.com");
-		Assert.assertTrue(registerPage.isConfirmEmailTextboxDisplayed());
-	}
-	
-	@Test
-	public void Register_02_Element_Undisplayed_In_DOM() {
+		
+		//fail lan 2
+		verifyFalse(registerPage.isConfirmEmailTextboxDisplayed());
+		
 		registerPage.inputToEmailTextbox("");
 		registerPage.sleepInSecond(3);
-		Assert.assertFalse(registerPage.isConfirmEmailTextboxDisplayed());
-	}
-
-	@Test
-	public void Register_03_Element_Undisplayed_Not_In_DOM() {
-		//undisplayed : invisible on UI and not in DOM
-		//isdisplayes : false(try-catch)
-		//wait maximum implicit
 		
-		//khẳng định
-		Assert.assertFalse(registerPage.isLoginButtonDisplayed());
+		verifyFalse(registerPage.isConfirmEmailTextboxDisplayed());
+		
+		//fail lan 3
+		verifyTrue(registerPage.isLoginButtonDisplayed());
+		verifyTrue(registerPage.isLoginButtonUnDisplayed());
 	}
-  @Test
-  
-  public void Register_04_Element_Undisplayed_Not_In_DOM() {
-		//undisplayed : invisible on UI and not in DOM
-		//find elements
-		//overridetimeout
-	  
-		//phu dinh
-	  Assert.assertTrue(registerPage.isLoginButtonUnDisplayed());
-  }
   
   @AfterClass
   public void afterClass() {

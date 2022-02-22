@@ -407,7 +407,6 @@ public class BasePage {
 		explicitWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByLocator(LocatorType)));
 	}
 	
-	
 	public void waitForAllElementVisible(WebDriver driver,String LocatorType, String...dynamicValues) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByLocator(getDynamicXpath(LocatorType,dynamicValues))));

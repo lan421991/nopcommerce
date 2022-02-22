@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="facebook">
+
+	<listeners>
+		<listener class-name ="commons.MethodListener"/>
+	</listeners>
+	
 	<parameter name ="url" value = "STAGING"/>
+	
     <test name="Run on chrome">
-  <parameter name = "browser"  value = "chrome" />
-    <classes>
-      <class name="com.facebook.register.Level_12_Register_Login_Element_Undisplayed"/>
-    </classes>
-  </test> 
+  		<parameter name = "browser"  value = "chrome" />
+    	<classes>
+      		<class name="com.facebook.register.Level_12_Register_Login_Element_Undisplayed"/>
+    	</classes>
+  	</test> 
   
 </suite> <!-- Suite -->
