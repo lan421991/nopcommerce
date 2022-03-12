@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//actions/ReportConfig/ReportNGListener.java=UTF-8
 encoding//actions/commons/BasePage.java=UTF-8
 encoding//actions/commons/BasePageFactory.java=UTF-8
 encoding//actions/commons/BaseTest.java=UTF-8
@@ -22,6 +23,7 @@ encoding//javaTester/javaBasic/Topic_11_String.java=UTF-8
 encoding//javaTester/javaOOP/Student.java=UTF-8
 encoding//javaTester/javaOOP/Topic_01_Class_Object.java=UTF-8
 encoding//javaTester/javaOOP/Topic_02_Variable_Property_Method.java=UTF-8
+encoding//javaTester/takeScreenshot/takeScreenshotTestFailed.java=UTF-8
 encoding//testcases/com/facebook/register/Level_12_Register_Login_Element_Assest_Verify.java=UTF-8
 encoding//testcases/com/facebook/register/Level_12_Register_Login_Element_Undisplayed.java=UTF-8
 encoding//testcases/com/jquery/datatable/Level_10_DataTable.java=UTF-8
@@ -38,4 +40,5 @@ encoding//testcases/com/nopcommerce/user/Level_06_Page_Generator_Manager_II.java
 encoding//testcases/com/nopcommerce/user/Level_07_Switch_Page.java=UTF-8
 encoding//testcases/com/nopcommerce/user/Level_07_Switch_Role.java=UTF-8
 encoding//testcases/com/nopcommerce/user/Level_09_Dynamic_Locator.java=UTF-8
-encoding//testcases/com/nopcommerce/user/Level_13_Register_Login_Log_Report.java=UTF-8
+encoding//testcases/com/nopcommerce/user/Level_13_Register_Login_Log_Extent_Report.java=UTF-8
+encoding//testcases/com/nopcommerce/user/Level_13_Register_Login_Log_ReportNG.java=UTF-8

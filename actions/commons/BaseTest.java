@@ -1,5 +1,6 @@
 package commons;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
@@ -14,6 +15,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeTest;
 
 import exception.BrowserNotSupport;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -90,9 +92,13 @@ public class BaseTest {
 		} else if (enviroment == EnviromentList.STAGING) {
 			envUrl = "https://www.facebook.com/reg/";
 		} else if (enviroment == EnviromentList.PRODUCTION) {
-			envUrl = "https://production.nopcommerce.com/";
+			envUrl = "https://demo.nopcommerce.com/";
 		}
 		return envUrl;
+	}
+	
+	public WebDriver getWebDriver() {
+		return this.driver;
 	}
 	
 	private boolean checkTrue(boolean condition) {
@@ -109,7 +115,7 @@ public class BaseTest {
 
 			// Add lỗi vào ReportNG
 			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);//lấy ra tất cả các lỗi
-			Reporter.getCurrentTestResult().setThrowable(e);
+			Reporter.getCurrentTestResult().setThrowable(e); //add exception vào reportNG
 		}
 		return pass;
 	}
@@ -156,5 +162,25 @@ public class BaseTest {
 
 	protected boolean verifyEquals(Object actual, Object expected) {
 		return checkEquals(actual, expected);
+	}
+	
+	@BeforeTest
+	public void deleteAllFilesInReportNGScreenshot() {
+		log.info("---------- START delete file in folder ----------");
+		try {
+			String workingDir = System.getProperty("user.dir"); //lấy đường dẫn file
+			String pathFolderDownload = workingDir + "/screenshotReportNG";
+			File file = new File(pathFolderDownload); //new file
+			File[] listOfFiles = file.listFiles(); // lấy tất cả các file
+			for (int i = 0; i < listOfFiles.length; i++) {
+				if (listOfFiles[i].isFile()) {
+					System.out.println(listOfFiles[i].getName());
+					new File(listOfFiles[i].toString()).delete();
+				}
+			}
+		} catch (Exception e) {
+			System.out.print(e.getMessage());
+		}
+		log.info("---------- END delete file in folder ----------");
 	}
 }

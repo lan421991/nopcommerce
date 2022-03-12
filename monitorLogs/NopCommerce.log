@@ -1,0 +1,462 @@
+[INFO ] [2022-03-02 19:01:27,383] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-02 19:01:28,218] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-02 19:01:28,452] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-02 19:01:28,638] User_01_Register - Step 04: Input Email Textbox
+[INFO ] [2022-03-02 19:01:28,822] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-02 19:01:29,004] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-02 19:01:29,186] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-02 19:01:30,245] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-02 19:01:30,316]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 19:01:30,316] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-02 19:01:31,268] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-02 19:01:32,347] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-02 19:01:32,598] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-02 19:01:32,819] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-02 19:01:33,782] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-02 19:01:33,916]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 19:01:33,916] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-02 19:01:34,627] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-02 19:01:34,723]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 19:01:34,727] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-02 19:01:35,472] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-02 19:01:36,154] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-02 19:01:36,854] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-02 19:01:37,521] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-02 19:01:38,162] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-02 19:01:38,786] Post-Condition - Close Browser
+[INFO ] [2022-03-02 19:03:14,428] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-02 19:03:15,227] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-02 19:03:15,453] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-02 19:03:15,623] User_01_Register - Step 04: Input Email Textbox
+[INFO ] [2022-03-02 19:03:15,830] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-02 19:03:16,021] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-02 19:03:16,220] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-02 19:03:17,296] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-02 19:03:17,372]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 19:03:17,372] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-02 19:03:18,299] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-02 19:03:19,033] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-02 19:03:19,243] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-02 19:03:19,433] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-02 19:03:20,318] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-02 19:03:20,414]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 19:03:20,414] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-02 19:03:21,392] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-02 19:03:21,494]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 19:03:21,499] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-02 19:03:22,579] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-02 19:03:23,265] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-02 19:03:23,971] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-02 19:03:24,649] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-02 19:03:25,291] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-02 19:03:25,928] Post-Condition - Close Browser
+[INFO ] [2022-03-02 19:07:18,830] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-02 19:07:19,572] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-02 19:07:19,790] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-02 19:07:19,989] User_01_Register - Step 04: Input Email Textbox
+[INFO ] [2022-03-02 19:07:20,220] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-02 19:07:20,410] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-02 19:07:20,613] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-02 19:07:21,608] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-02 19:07:21,686]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 19:07:21,686] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-02 19:07:22,576] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-02 19:07:23,224] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-02 19:07:23,457] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-02 19:07:23,657] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-02 19:07:24,528] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-02 19:07:24,622]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 19:07:24,622] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-02 19:07:25,236] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-02 19:07:25,339]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-02 19:07:25,344] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-02 19:07:25,997] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-02 19:07:26,694] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-02 19:07:27,355] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-02 19:07:27,973] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-02 19:07:28,563] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-02 19:07:29,136] Post-Condition - Close Browser
+[INFO ] [2022-03-03 10:24:36,399] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-03 10:24:37,152] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-03 10:24:37,380] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-03 10:24:37,563] User_01_Register - Step 04: Input Email Textboxfc-1964010305@gmail.com
+[INFO ] [2022-03-03 10:24:37,770] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-03 10:24:37,959] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-03 10:24:38,145] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-03 10:24:39,184] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-03 10:24:39,256]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 10:24:39,256] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-03 10:24:40,222] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-03 10:24:40,936] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-03 10:24:41,121] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-03 10:24:41,300] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-03 10:24:42,192] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-03 10:24:42,276]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 10:24:42,276] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-03 10:24:42,932] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-03 10:24:43,008]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 10:24:43,124] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-03 10:24:43,819] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-03 10:24:44,796] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-03 10:24:47,085] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-03 10:24:47,691] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-03 10:24:48,270] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-03 10:24:48,881] Post-Condition - Close Browser
+[INFO ] [2022-03-03 15:51:22,968] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-03 15:51:23,902] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-03 15:51:24,132] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-03 15:51:24,320] User_01_Register - Step 04: Input Email Textboxfc259714392@gmail.com
+[INFO ] [2022-03-03 15:51:24,535] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-03 15:51:24,718] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-03 15:51:24,892] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-03 15:51:25,926] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-03 15:51:26,030]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 15:51:26,030] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-03 15:51:27,021] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-03 15:51:27,790] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-03 15:51:28,012] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-03 15:51:28,186] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-03 15:51:29,172] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-03 15:51:29,290]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 15:51:29,290] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-03 15:51:30,071] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-03 15:51:30,147]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 15:51:30,151] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-03 15:51:30,949] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-03 15:51:31,717] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-03 15:51:32,420] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-03 15:51:33,032] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-03 15:51:33,650] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-03 15:51:34,281] Post-Condition - Close Browser
+[INFO ] [2022-03-03 16:19:13,842] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-03 16:19:14,674] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-03 16:19:14,892] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-03 16:19:15,065] User_01_Register - Step 04: Input Email Textboxfc1569432130@gmail.com
+[INFO ] [2022-03-03 16:19:15,272] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-03 16:19:15,442] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-03 16:19:15,616] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-03 16:19:16,642] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-03 16:19:16,729]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 16:19:16,729] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-03 16:19:17,669] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-03 16:19:18,387] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-03 16:19:18,579] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-03 16:19:18,760] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-03 16:19:19,810] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-03 16:19:19,911]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 16:19:19,911] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-03 16:19:20,654] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-03 16:19:20,755]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-03 16:19:20,763] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-03 16:19:21,443] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-03 16:19:22,182] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-03 16:19:22,944] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-03 16:19:23,540] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-03 16:19:24,148] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-03 16:19:24,734] Post-Condition - Close Browser
+[INFO ] [2022-03-03 16:31:55,228] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-03 16:31:56,020] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-03 16:31:56,270] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-03 16:31:56,482] User_01_Register - Step 04: Input Email Textboxfc1267853928@gmail.com
+[INFO ] [2022-03-03 16:31:56,719] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-03 16:31:56,954] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-03 16:31:57,302] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-03 16:31:58,696] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-03 16:31:58,844]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 16:31:58,844] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-03 16:31:59,818] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-03 16:32:00,657] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-03 16:32:00,888] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-03 16:32:01,102] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-03 16:32:02,389] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-03 16:32:02,507]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 16:32:02,507] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-03 16:32:03,172] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-03 16:32:03,462]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-03 16:32:03,470] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-03 16:32:04,717] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-03 16:32:04,761] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-03 16:32:06,017] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-03 16:32:06,221] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-03 16:32:06,327] User_01_Register - Step 04: Input Email Textboxfc2129727007@gmail.com
+[INFO ] [2022-03-03 16:32:06,498] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-03 16:32:06,531] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-03 16:32:06,587] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-03 16:32:06,671] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-03 16:32:06,855] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-03 16:32:07,396] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-03 16:32:07,632] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-03 16:32:07,885] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-03 16:32:07,961] User_01_Register - Step 04: Input Email Textboxfc-1790382317@gmail.com
+[INFO ] [2022-03-03 16:32:07,985] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-03 16:32:08,094]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 16:32:08,094] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-03 16:32:08,288] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-03 16:32:08,567] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-03 16:32:08,754] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-03 16:32:08,961] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-03 16:32:09,002] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-03 16:32:09,618] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-03 16:32:10,235] Post-Condition - Close Browser
+[INFO ] [2022-03-03 16:32:10,600] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-03 16:32:10,766] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-03 16:32:11,204] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-03 16:32:11,402] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-03 16:32:11,479]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 16:32:11,480] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-03 16:32:12,403] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-03 16:32:12,416] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-03 16:32:12,512]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 16:32:12,512] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-03 16:32:13,270] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-03 16:32:13,441] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-03 16:32:13,486] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-03 16:32:13,579]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-03 16:32:13,582] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-03 16:32:13,616] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-03 16:32:14,954] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-03 16:32:15,005]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 16:32:15,006] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-03 16:32:15,166] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-03 16:32:15,660] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-03 16:32:15,719]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-03 16:32:15,723] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-03 16:32:15,949] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-03 16:32:16,552] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-03 16:32:16,761] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-03 16:32:17,396] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-03 16:32:17,400] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-03 16:32:17,933] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-03 16:32:18,241] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-03 16:32:18,493] Post-Condition - Close Browser
+[INFO ] [2022-03-03 16:32:18,884] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-03 16:32:19,442] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-03 16:32:20,023] Post-Condition - Close Browser
+[INFO ] [2022-03-03 17:50:30,261] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-03 17:50:31,195] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-03 17:50:31,397] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-03 17:50:31,572] User_01_Register - Step 04: Input Email Textboxfc-1012510173@gmail.com
+[INFO ] [2022-03-03 17:50:31,761] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-03 17:50:31,945] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-03 17:50:32,152] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-03 17:50:33,366] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-03 17:50:33,444]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 17:50:33,444] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-03 17:50:34,472] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-03 17:50:35,257] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-03 17:50:35,466] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-03 17:50:35,633] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-03 17:50:36,589] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-03 17:50:36,697]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 17:50:36,697] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-03 17:50:37,438] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-03 17:50:37,531]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-03 17:50:37,537] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-03 17:50:38,232] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-03 17:50:38,907] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-03 17:50:39,631] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-03 17:50:40,219] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-03 17:50:40,872] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-03 17:50:41,580] Post-Condition - Close Browser
+[INFO ] [2022-03-03 17:58:56,650] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-03 17:58:57,456] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-03 17:58:57,706] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-03 17:58:57,914] User_01_Register - Step 04: Input Email Textboxfc986440135@gmail.com
+[INFO ] [2022-03-03 17:58:58,134] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-03 17:58:58,346] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-03 17:58:58,547] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-03 17:58:59,526] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-03 17:58:59,605]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 17:58:59,605] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-03 17:59:00,446] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-03 17:59:01,171] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-03 17:59:01,418] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-03 17:59:01,647] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-03 17:59:02,626] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-03 17:59:02,774]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-03 17:59:02,775] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-03 17:59:03,479] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-03 17:59:03,580]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-03 17:59:03,589] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-03 17:59:04,254] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-03 17:59:04,899] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-03 17:59:05,570] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-03 17:59:06,142] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-03 17:59:06,725] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-03 17:59:07,350] Post-Condition - Close Browser
+[INFO ] [2022-03-11 15:25:59,426] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-11 15:26:00,554] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-11 15:26:00,758] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-11 15:26:00,930] User_01_Register - Step 04: Input Email Textboxfc161849908@gmail.com
+[INFO ] [2022-03-11 15:26:01,120] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-11 15:26:01,341] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-11 15:26:01,528] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-11 15:26:02,623] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-11 15:26:02,698]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-11 15:26:02,699] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-11 15:26:03,592] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-11 15:26:04,292] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-11 15:26:04,496] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-11 15:26:04,676] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-11 15:26:05,735] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-11 15:26:05,811]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-11 15:26:05,812] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-11 15:26:06,549] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-11 15:26:06,640]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-11 15:26:06,818] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-11 15:26:07,493] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-11 15:26:08,288] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-11 15:26:09,102] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-11 15:26:09,733] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-11 15:26:10,349] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-11 15:26:10,976] Post-Condition - Close Browser
+[INFO ] [2022-03-11 15:36:31,455] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-11 15:36:32,216] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-11 15:36:32,415] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-11 15:36:32,590] User_01_Register - Step 04: Input Email Textboxfc-1646634020@gmail.com
+[INFO ] [2022-03-11 15:36:32,778] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-11 15:36:32,963] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-11 15:36:33,143] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-11 15:36:34,177] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-11 15:36:34,277]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-11 15:36:34,277] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-11 15:36:35,196] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-11 15:36:35,991] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-11 15:36:36,250] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-11 15:36:36,452] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-11 15:36:37,411] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-11 15:36:37,492]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-11 15:36:37,492] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-11 15:36:38,164] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-11 15:36:38,259]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-11 15:36:38,558] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-11 15:36:39,247] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-11 15:36:39,946] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-11 15:36:40,650] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-11 15:36:41,309] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-11 15:36:41,899] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-11 15:36:42,516] Post-Condition - Close Browser
+[INFO ] [2022-03-11 16:14:20,404] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-11 16:14:21,580] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-11 16:14:21,800] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-11 16:14:21,973] User_01_Register - Step 04: Input Email Textboxfc-1781985171@gmail.com
+[INFO ] [2022-03-11 16:14:22,169] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-11 16:14:22,359] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-11 16:14:22,535] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-11 16:14:23,755] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-11 16:14:23,861]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-11 16:14:23,861] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-11 16:14:24,834] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-11 16:14:25,575] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-11 16:14:25,783] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-11 16:14:25,962] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-11 16:14:26,932] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-11 16:14:27,036]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-11 16:14:27,037] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-11 16:14:27,748] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-11 16:14:27,836]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-11 16:14:28,056] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-11 16:14:28,822] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-11 16:14:29,588] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-11 16:14:30,297] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-11 16:14:30,932] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-11 16:14:31,523] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-11 16:14:32,156] Post-Condition - Close Browser
+[INFO ] [2022-03-11 16:16:57,295] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-11 16:16:57,957] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-11 16:16:58,174] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-11 16:16:58,348] User_01_Register - Step 04: Input Email Textboxfc-1730228421@gmail.com
+[INFO ] [2022-03-11 16:16:58,542] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-11 16:16:58,733] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-11 16:16:58,908] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-11 16:17:00,189] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-11 16:17:00,262]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-11 16:17:00,262] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-11 16:17:01,163] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-11 16:17:01,866] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-11 16:17:02,055] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-11 16:17:02,233] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-11 16:17:03,210] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-11 16:17:03,289]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-11 16:17:03,290] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-11 16:17:03,926] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-11 16:17:04,002]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-11 16:17:04,168] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-11 16:17:04,923] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-11 16:17:05,655] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-11 16:17:06,342] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-11 16:17:06,997] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-11 16:17:07,614] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-11 16:17:08,208] Post-Condition - Close Browser
+[INFO ] [2022-03-11 16:23:37,983] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-11 16:23:38,710] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-11 16:23:38,945] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-11 16:23:39,126] User_01_Register - Step 04: Input Email Textboxfc-1161615399@gmail.com
+[INFO ] [2022-03-11 16:23:39,333] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-11 16:23:39,530] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-11 16:23:39,723] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-11 16:23:40,792] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-11 16:23:40,878]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-11 16:23:40,878] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-11 16:23:41,822] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-11 16:23:42,798] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-11 16:23:43,034] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-11 16:23:43,205] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-11 16:23:44,138] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-11 16:23:44,233]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-11 16:23:44,234] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-11 16:23:44,939] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-11 16:23:45,041]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-11 16:23:45,209] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-11 16:23:45,925] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-11 16:23:48,198] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-11 16:23:48,881] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-11 16:23:49,497] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-11 16:23:50,101] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-11 16:23:50,706] Post-Condition - Close Browser
+[INFO ] [2022-03-11 16:41:41,989] ---------- START delete file in folder ----------
+[INFO ] [2022-03-11 16:41:41,991] ---------- END delete file in folder ----------
+[INFO ] [2022-03-11 16:41:46,561] User_01_Register - Step 01: Open register page
+[INFO ] [2022-03-11 16:41:47,301] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2022-03-11 16:41:47,519] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2022-03-11 16:41:47,717] User_01_Register - Step 04: Input Email Textboxfc-398592989@gmail.com
+[INFO ] [2022-03-11 16:41:47,911] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2022-03-11 16:41:48,101] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2022-03-11 16:41:48,280] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2022-03-11 16:41:49,258] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2022-03-11 16:41:49,349]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-11 16:41:49,349] User_01_Register - Step 09: Click Log out
+[INFO ] [2022-03-11 16:41:50,294] User_01_Register - Step 10: Open Login Page
+[INFO ] [2022-03-11 16:41:50,964] User_01_Register - Step 11: Input Email
+[INFO ] [2022-03-11 16:41:51,162] User_01_Register - Step 12: Input Password
+[INFO ] [2022-03-11 16:41:51,338] User_01_Register - Step 13: Click Login button
+[INFO ] [2022-03-11 16:41:52,246] User_01_Register - Step 14: Vefify Login Success
+[INFO ] [2022-03-11 16:41:52,349]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-11 16:41:52,349] User_01_Register - Step 15: Open MyAccount Page
+[INFO ] [2022-03-11 16:41:53,043] User_01_Register - Step 16: Verify CustomerInfor Displayed
+[INFO ] [2022-03-11 16:41:53,127]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-11 16:41:53,310] User_02_Register - Step 01: Open Address Page
+[INFO ] [2022-03-11 16:41:53,954] User_02_Register - Step 02: Open MyProductReview Page
+[INFO ] [2022-03-11 16:41:54,592] User_02_Register - Step 03: Open RewardPoint Page
+[INFO ] [2022-03-11 16:41:55,307] User_02_Register - Step 04: Open Address Page
+[INFO ] [2022-03-11 16:41:55,904] User_02_Register - Step 05: Open RewardPoint Page
+[INFO ] [2022-03-11 16:41:56,502] User_02_Register - Step 06: Open MyProductReview Page
+[INFO ] [2022-03-11 16:41:57,127] Post-Condition - Close Browser
+[INFO ] [2022-03-12 16:37:05,726] ---------- START delete file in folder ----------
+[INFO ] [2022-03-12 16:37:05,749] ---------- END delete file in folder ----------
+[INFO ] [2022-03-12 16:37:15,084]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-12 16:37:18,494]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-12 16:37:19,318]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-12 16:41:35,516] ---------- START delete file in folder ----------
+[INFO ] [2022-03-12 16:41:35,519] ---------- END delete file in folder ----------
+[INFO ] [2022-03-12 16:41:42,865]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-12 16:41:45,968]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-03-12 16:41:46,779]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-12 16:46:28,909] ---------- START delete file in folder ----------
+[INFO ] [2022-03-12 16:46:28,911] ---------- END delete file in folder ----------
+[INFO ] [2022-03-12 16:46:36,151]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-03-12 16:47:53,225] ---------- START delete file in folder ----------
+[INFO ] [2022-03-12 16:47:53,226] ---------- END delete file in folder ----------
+[INFO ] [2022-03-12 16:48:06,151] ---------- START delete file in folder ----------
+[INFO ] [2022-03-12 16:48:06,152] ---------- END delete file in folder ----------
+[INFO ] [2022-03-12 16:48:13,055]  -------------------------- PASSED -------------------------- 

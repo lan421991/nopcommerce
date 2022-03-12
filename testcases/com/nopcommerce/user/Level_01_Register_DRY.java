@@ -1,9 +1,15 @@
 package com.nopcommerce.user;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.velocity.texen.util.FileUtil;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
@@ -17,6 +23,7 @@ public class Level_01_Register_DRY {
 	WebDriver driver;
 	String emailAddress;
 	String projectPath = System.getProperty("user.dir");
+	String projectLocation = projectPath + "/screenshotImg/";
 	
   @BeforeClass
   public void beforeClass() {
@@ -37,6 +44,7 @@ public class Level_01_Register_DRY {
 		Assert.assertEquals(driver.findElement(By.cssSelector("span#Email-error")).getText(), "Email is required.");
 		Assert.assertEquals(driver.findElement(By.cssSelector("span#Password-error")).getText(), "Password is required.");
 		Assert.assertEquals(driver.findElement(By.cssSelector("span#ConfirmPassword-error")).getText(), "Password is required.");
+		takeSreenshot(projectLocation + "/registerEmptydata.png");
   }
   
   @Test
@@ -52,6 +60,7 @@ public class Level_01_Register_DRY {
 		driver.findElement(By.cssSelector("button#register-button")).click();
 
 		Assert.assertEquals(driver.findElement(By.cssSelector("span#Email-error")).getText(), "Wrong email");
+		takeSreenshot(projectLocation + "/registerInvaliddata.png");
   }
   
   @Test
@@ -69,6 +78,7 @@ public class Level_01_Register_DRY {
 		Assert.assertEquals(driver.findElement(By.cssSelector("div.result")).getText(), "Your registration completed");
 
 		driver.findElement(By.cssSelector("a.ico-logout")).click();
+		takeSreenshot(projectLocation + "/registersuccess.png");
   }
   
   @Test
@@ -84,6 +94,7 @@ public class Level_01_Register_DRY {
 		driver.findElement(By.cssSelector("button#register-button")).click();
 
 		Assert.assertEquals(driver.findElement(By.cssSelector("div.message-error li")).getText(), "The specified email already exists");
+		takeSreenshot(projectPath + "/registerExitEmail.png");
   }
   
   @Test
@@ -99,6 +110,7 @@ public class Level_01_Register_DRY {
 		driver.findElement(By.cssSelector("button#register-button")).click();
 
 		Assert.assertEquals(driver.findElement(By.cssSelector("#Password-error")).getText(), "Password must meet the following rules:\nmust have at least 6 characters");
+		takeSreenshot(projectLocation + "/registerPasswordLessThan6.png");
   }
   
   @Test
@@ -113,11 +125,27 @@ public class Level_01_Register_DRY {
 
 		driver.findElement(By.cssSelector("button#register-button")).click();
 		Assert.assertEquals(driver.findElement(By.cssSelector("#ConfirmPassword-error")).getText(), "The password and confirmation password do not match.");
+		takeSreenshot(projectLocation + "/registerInvalidPassword.png");
   }
   
   public int genarateFakeNumber() {
 	  Random rand = new Random();
 	  return rand.nextInt();
+  }
+  
+  public void takeSreenshot(String FileWithPath) {
+	  //convert web driver object to TakesScreenshot
+	  TakesScreenshot scrShot = (TakesScreenshot) driver;
+	  //call getScreenshotAs method to create Image file 
+	  File ScrFile = scrShot.getScreenshotAs(OutputType.FILE);
+	  //Move Image File to new Destination
+	  File DestFile = new File(FileWithPath);
+	  try {
+		  //copy file to Destination
+		FileUtils.copyFile(ScrFile, DestFile);
+	  } catch (IOException e) {
+		e.printStackTrace();
+	  }
   }
   
   @AfterClass

@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="DataTable">
-	<parameter name ="enviromentName" value = "dev"/>
+<suite name="UserNopCommerce" parallel ="tests" thread-count = "3">
+
+	<listeners>
+		<listener class-name ="org.uncommons.reportng.HTMLReporter"/>		
+		<listener class-name ="org.uncommons.reportng.JUnitXMLReporter"/>
+		<listener class-name ="commons.MethodListener"/>
+		<listener class-name ="ReportConfig.ExtentTestListener"/>
+		<listener class-name ="ReportConfig.ReportNGListener"/>
+	</listeners>
+	
+	<parameter name ="url" value = "PRODUCTION"/>
+	
     <test name="Run on chrome">
-  <parameter name = "browser"  value = "chrome" />
-    <classes>
-      <class name="com.jquery.datatable.Level_10_DataTable"/>
-    </classes>
-  </test> 
+  		<parameter name = "browser"  value = "chrome" />
+    	<classes>
+      <class name="com.nopcommerce.user.Level_13_Register_Login_Log_ReportNG"/>
+    	</classes>
+  	</test> 
   
 </suite> <!-- Suite -->
