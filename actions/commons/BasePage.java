@@ -501,8 +501,36 @@ public class BasePage {
 		clickToElement(driver, AdminBasePageUI.SUB_MENU_LINKBY_NAME, subMenuPageName);
 	}
 	
+
+	
+	private By getByLocator1(String locatorType) {
+		By by = null;
+		if(locatorType.startsWith("id=") || locatorType.startsWith("ID=") || locatorType.startsWith("Id=")) {
+			by = By.id(locatorType.substring(3));
+		} else if (locatorType.startsWith("class=") || locatorType.startsWith("Class=") || locatorType.startsWith("CLASS=")) {
+			by = By.className(locatorType.substring(6));
+		} else if (locatorType.startsWith("name=") || locatorType.startsWith("Name=") || locatorType.startsWith("NAME=")) {
+			by = By.name(locatorType.substring(5));
+		} else if (locatorType.startsWith("css=") || locatorType.startsWith("Css=") || locatorType.startsWith("CSS=")) {
+			by = By.cssSelector(locatorType.substring(4));
+		}else if (locatorType.startsWith("xpath=") || locatorType.startsWith("Xpath=") || locatorType.startsWith("XPATH=") || locatorType.startsWith("XPath=")) {
+			by = By.xpath(locatorType.substring(6));
+		}else {
+			throw new RuntimeException("Locator Type is not support");
+		}
+		return by;
+	}
+	private WebElement getWebElement1(WebDriver driver, String LocatorType, String...dynamicValues) {
+		return driver.findElement(getByLocator(getDynamicXpath(LocatorType,dynamicValues)));
+	}
+	private String getDynamicXpath1(String locatorType, String...dynamicValues) {
+		if (locatorType.startsWith("xpath=") || locatorType.startsWith("Xpath=") || locatorType.startsWith("XPATH=") || locatorType.startsWith("XPath=")) {
+			locatorType = String.format(locatorType, (Object[])dynamicValues);
+			}
+		return locatorType;
+	}
+	
 	public void uploadFileByCardName(WebDriver driver,String cardName, String...fileNames) {
-		//String filePath = System.getProperty("user.dir") + "\\uploadFiles\\";
 		String filePath = GlobalConstants.PROJECT_PATH + "\\uploadFiles\\";
 		String fullFileName = "";
 		for(String file:fileNames) {
