@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="UserNopCommerce" parallel ="tests" thread-count = "3">
+
+	<listeners>
+<!-- 		<listener class-name ="commons.MethodListener"/> -->
+<!-- 		<listener class-name ="ReportConfig.ExtentTestListener"/> -->
+		<listener class-name ="ReportConfig.AllureTestListener"/>
+	</listeners>
+	
+	<parameter name ="url" value = "PRODUCTION"/>
+	
+    <test name="Run on chrome">
+  		<parameter name = "browser"  value = "chrome" />
+    	<classes>
+      <class name="com.nopcommerce.user.Level_15_Register_Login_Log_Allure_Report"/>
+    	</classes>
+  	</test> 
+  
+</suite> <!-- Suite -->

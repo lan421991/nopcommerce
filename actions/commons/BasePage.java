@@ -17,6 +17,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.qameta.allure.Step;
 import pageObjects.nopcommerce.Admin.LoginPO;
 import pageObjects.nopcommerce.Admin.ProductSearchPO;
 import pageObjects.nopcommerce.user.UserAddressPageObject;
@@ -440,18 +441,21 @@ public class BasePage {
 		return PageGeneratorManager.getUserCustomerInforPage(driver);
 	}
 	
+	@Step("Open Address Page")
 	public UserAddressPageObject openAddressPage(WebDriver driver) {
 		waitForElementClickEnable(driver, BasePageUI.ADDRESS_LINK);
 		clickToElement(driver,BasePageUI.ADDRESS_LINK);
 		return PageGeneratorManager.getUserAddressPage(driver);
 	}
 	
+	@Step("Open MyProductReview Page")
 	public UserMyProductReviewPageObject openMyProductReviewPage(WebDriver driver) {
 		waitForElementClickEnable(driver, BasePageUI.MY_PRODUCT_REVIEW_LINK);
 		clickToElement(driver,BasePageUI.MY_PRODUCT_REVIEW_LINK);
 		return PageGeneratorManager.getUserMyProductReviewPage(driver);
 	}
 	
+	@Step("Open RewardPoint Page")
 	public UserRewardPointPageObject openRewardPointPage(WebDriver driver) {
 		waitForElementClickEnable(driver, BasePageUI.REWARD_POINT_LINK);
 		clickToElement(driver,BasePageUI.REWARD_POINT_LINK);
