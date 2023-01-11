@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 
-import ReportConfig.ExtentTestManager;
 import commons.BaseTest;
 import commons.PageGeneratorManager;
 import io.qameta.allure.Description;

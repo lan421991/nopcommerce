@@ -28,13 +28,13 @@ public class ReportNGListener implements ITestListener{
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		System.setProperty("org.uncommons.reportng.escape-output", "false");// set false để nhúng html vào
+		System.setProperty("org.uncommons.reportng.escape-output", "false");// set false để nhúng html vào, nếu k set false thì nhận dạng là text
 
 		Object testClass = result.getInstance();
-		WebDriver webDriver = ((BaseTest) testClass).getWebDriver();
+		WebDriver webDriver = ((BaseTest) testClass).getWebDriver();	
 
 		String screenshotPath = captureScreenshot(webDriver, result.getName());
-		Reporter.getCurrentTestResult();
+		Reporter.getCurrentTestResult(); // add exceoption vào reportNG
 		Reporter.log("<br><a target=\"_blank\" href=\"file:///" + screenshotPath + "\">" + "<img src=\"file:///" + screenshotPath + "\" " + "height='100' width='150'/> " + "</a></br>");
 		Reporter.setCurrentTestResult(null);
 	}

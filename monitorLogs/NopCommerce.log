@@ -480,3 +480,64 @@
 [INFO ] [2023-01-04 09:41:11,807] ---------- START delete file in folder ----------
 [INFO ] [2023-01-04 09:41:11,807] ---------- END delete file in folder ----------
 [INFO ] [2023-01-04 09:41:15,305]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-04 15:07:35,369] ---------- START delete file in folder ----------
+[INFO ] [2023-01-04 15:07:35,370] ---------- END delete file in folder ----------
+[INFO ] [2023-01-04 15:07:41,083]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-04 17:42:01,890] ---------- START delete file in folder ----------
+[INFO ] [2023-01-04 17:42:01,891] ---------- END delete file in folder ----------
+[INFO ] [2023-01-04 17:42:06,556]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-04 17:48:38,897] ---------- START delete file in folder ----------
+[INFO ] [2023-01-04 17:48:38,898] ---------- END delete file in folder ----------
+[INFO ] [2023-01-04 17:48:42,991]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-05 10:08:11,028] ---------- START delete file in folder ----------
+[INFO ] [2023-01-05 10:08:11,029] ---------- END delete file in folder ----------
+[INFO ] [2023-01-05 10:08:16,434]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-05 10:10:25,299] ---------- START delete file in folder ----------
+[INFO ] [2023-01-05 10:10:25,300] ---------- END delete file in folder ----------
+[INFO ] [2023-01-05 10:10:30,232]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-05 10:11:54,158] ---------- START delete file in folder ----------
+[INFO ] [2023-01-05 10:11:54,159] ---------- END delete file in folder ----------
+[INFO ] [2023-01-05 10:11:58,958]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-05 10:15:14,875] ---------- START delete file in folder ----------
+[INFO ] [2023-01-05 10:15:14,876] ---------- END delete file in folder ----------
+[INFO ] [2023-01-05 10:15:20,149]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-05 10:15:28,000] ---------- START delete file in folder ----------
+[INFO ] [2023-01-05 10:15:28,001] ---------- END delete file in folder ----------
+[INFO ] [2023-01-05 10:15:32,263]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-05 10:20:31,745] ---------- START delete file in folder ----------
+[INFO ] [2023-01-05 10:20:31,746] ---------- END delete file in folder ----------
+[INFO ] [2023-01-05 10:20:36,525]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-05 10:26:05,670] ---------- START delete file in folder ----------
+[INFO ] [2023-01-05 10:26:05,670] ---------- END delete file in folder ----------
+[INFO ] [2023-01-05 10:26:07,823] User_01_Register - Step 01: Open register page
+[INFO ] [2023-01-05 10:26:08,777] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2023-01-05 10:26:08,860] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2023-01-05 10:26:08,935] User_01_Register - Step 04: Input Email Textboxfc202235942@gmail.com
+[INFO ] [2023-01-05 10:26:09,012] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2023-01-05 10:26:09,085] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2023-01-05 10:26:09,159] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2023-01-05 10:26:09,759] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2023-01-05 10:26:09,799]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-05 10:26:09,799] User_01_Register - Step 09: Click Log out
+[INFO ] [2023-01-05 10:34:20,442] ---------- START delete file in folder ----------
+[INFO ] [2023-01-05 10:34:20,443] ---------- END delete file in folder ----------
+[INFO ] [2023-01-05 10:34:23,463] User_01_Register - Step 01: Open register page
+[INFO ] [2023-01-05 10:34:24,497] User_01_Register - Step 02: Input firstName Textbox
+[INFO ] [2023-01-05 10:34:24,581] User_01_Register - Step 03: Input lastName Textbox
+[INFO ] [2023-01-05 10:34:24,657] User_01_Register - Step 04: Input Email Textboxfc-1752754166@gmail.com
+[INFO ] [2023-01-05 10:34:24,734] User_01_Register - Step 05: Input valid Password Textbox
+[INFO ] [2023-01-05 10:34:24,805] User_01_Register - Step 06: Input valid ConfirmPassword Textbox
+[INFO ] [2023-01-05 10:34:24,876] User_01_Register - Step 07: Click RegisterButton
+[INFO ] [2023-01-05 10:34:25,456] User_01_Register - Step 08: Verify Register Success
+[INFO ] [2023-01-05 10:34:25,492]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-01-05 10:34:25,492] User_01_Register - Step 09: Click Log out
+[INFO ] [2023-01-05 10:38:22,052] ---------- START delete file in folder ----------
+[INFO ] [2023-01-05 10:38:22,052] ---------- END delete file in folder ----------
+[INFO ] [2023-01-05 10:40:21,080] ---------- START delete file in folder ----------
+[INFO ] [2023-01-05 10:40:21,081] ---------- END delete file in folder ----------
+[INFO ] [2023-01-05 10:46:46,080] ---------- START delete file in folder ----------
+[INFO ] [2023-01-05 10:46:46,081] ---------- END delete file in folder ----------
+[INFO ] [2023-01-05 10:50:08,531] ---------- START delete file in folder ----------
+[INFO ] [2023-01-05 10:50:08,531] ---------- END delete file in folder ----------
+[INFO ] [2023-01-05 11:04:27,801] ---------- START delete file in folder ----------
+[INFO ] [2023-01-05 11:04:27,802] ---------- END delete file in folder ----------

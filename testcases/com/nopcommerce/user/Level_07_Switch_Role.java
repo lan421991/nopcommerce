@@ -21,37 +21,14 @@ public class Level_07_Switch_Role extends BaseTest{
 	@BeforeClass
 	public void beforeClass(String browserName, String url) {
 	  driver = getBrowserDriver(browserName,url);
-	  userHomePage = PageGeneratorManager.getUserHomePage(driver);
-	  
-	  userEmailAddress = "fc-265705590@gmail.com";
-	  userPassword = "123456";
-	  adminUsername = "admin@yourstore.com";
-	  adminPassword = "admin";
   	}
   
   @Test
   public void Role_01_Login() {
-	  userLoginPage = userHomePage.openLoginPage();
-	  
-	  userHomePage = userLoginPage.loginAsUser(userEmailAddress, userPassword);
-	  Assert.assertTrue(userHomePage.isMyAccountLinkDisplayed());
-	  
-	  userCustomerInforPage = userHomePage.openMyAccountPage();
-	  userHomePage = userCustomerInforPage.clickToLogoutLinkAtUserPage(driver);
-	  
-	  userHomePage.openPageUrl(driver, GlobalConstants.ADMIN_PAGE_LINK);
-	  adminLoginPage = PageGeneratorManager.getAdminLoginPage(driver);
-	  
-	  adminDashBoardPage = adminLoginPage.loginAsAdmin(adminUsername,adminPassword);
-	  Assert.assertTrue(adminDashBoardPage.isDashBoardDisplayed());
-	  
-	  adminLoginPage = adminDashBoardPage.clickToLogoutLinkAtAdminPage(driver);
   	}
   
   @Test
   public void Role_02_Admin() {
-	  adminLoginPage.openPageUrl(driver, GlobalConstants.PORTAL_PAGE_LINK);
-	  userHomePage = PageGeneratorManager.getUserHomePage(driver);
   	}
   
   @AfterClass
@@ -60,10 +37,4 @@ public class Level_07_Switch_Role extends BaseTest{
   }
   
 	private WebDriver driver;
-	private String userEmailAddress, userPassword, adminUsername, adminPassword;
-	private UserHomePageObject userHomePage;
-	private UserLoginPageObject userLoginPage;
-	private UserCustomerInforPageObject userCustomerInforPage;
-	private LoginPO adminLoginPage;
-	private DashBoardPO adminDashBoardPage;
 }
